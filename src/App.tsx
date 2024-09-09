@@ -3,6 +3,8 @@ import { BrowserRouter, Routes, Route, Link } from "react-router-dom";
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import { useState, lazy, Suspense } from "react";
 import AdoptedPetContext from "./AdoptedPetContext";
+import { Pet } from "./APIResponsesTypes";
+
 const Details = lazy(() => import("./Details"));
 const SearchParams = lazy(() => import("./SearchParams"));
 
@@ -16,7 +18,8 @@ const queryClient = new QueryClient({
 });
 
 const App = () => {
-  const adoptedPet = useState(null);
+  const adoptedPet = useState(null as Pet | null);
+
   return (
     <div>
       <BrowserRouter>
@@ -45,5 +48,10 @@ const App = () => {
 };
 
 const container = document.getElementById("root");
+
+if (!container) {
+  throw new Error("no container to render to");
+}
+
 const root = createRoot(container);
 root.render(<App />);
