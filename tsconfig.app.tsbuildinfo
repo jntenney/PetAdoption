@@ -1,0 +1,1 @@
+{"root":["./src/apiresponsestypes.ts","./src/adoptedpetcontext.ts","./src/app.tsx","./src/carousel.tsx","./src/details.tsx","./src/errorboundary.tsx","./src/modal.tsx","./src/pet.tsx","./src/results.tsx","./src/searchparams.tsx","./src/fetchbreedlist.ts","./src/fetchpet.ts","./src/fetchsearch.ts","./src/usebreedlist.ts","./src/vite-env.d.ts"],"version":"5.6.2"}
